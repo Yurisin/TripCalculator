@@ -1,0 +1,795 @@
+object FormHome: TFormHome
+  Left = 0
+  Top = 0
+  Caption = 'Tela de Cadastro / Login'
+  ClientHeight = 480
+  ClientWidth = 320
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object TabControlHome: TTabControl
+    Align = Client
+    Size.Width = 320.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 3
+    TabOrder = 0
+    TabPosition = Dots
+    Sizes = (
+      320s
+      480s
+      320s
+      480s
+      320s
+      480s
+      320s
+      480s)
+    object TabItemLogin: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.HorzAlign = Leading
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItemLogin'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object LayoutBackLogin: TLayout
+        Align = Client
+        Size.Width = 320.000000000000000000
+        Size.Height = 480.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object LayoutCabecalhoLogin: TLayout
+          Align = Top
+          Size.Width = 320.000000000000000000
+          Size.Height = 185.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object LblLogin: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Size.Width = 320.000000000000000000
+            Size.Height = 41.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 26.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Login'
+            TabOrder = 0
+          end
+          object ImgLogin: TImage
+            MultiResBitmap = <
+              item
+              end>
+            Align = Center
+            Size.Width = 199.000000000000000000
+            Size.Height = 128.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object LayoutCorpoLogin: TLayout
+          Align = Top
+          Position.Y = 185.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 160.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object LblEmailLogin: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Size.Width = 320.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Email'
+            TabOrder = 0
+          end
+          object EditEmailLogin: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 1
+            Position.Y = 33.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object LblSenhaLogin: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.Y = 55.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Senha'
+            TabOrder = 2
+          end
+          object EditSenhaLogin: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 3
+            Position.Y = 81.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object LayoutCorpoRodape: TLayout
+          Align = Bottom
+          Position.Y = 344.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 136.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object BtnLogar: TRoundRect
+            Align = Top
+            Fill.Color = claCornflowerblue
+            Size.Width = 320.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            OnClick = BtnLogarClick
+            object LblLogar: TLabel
+              Align = Center
+              StyledSettings = [Family, Style, FontColor]
+              Size.Width = 165.000000000000000000
+              Size.Height = 41.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 22.000000000000000000
+              TextSettings.HorzAlign = Center
+              Text = 'Login'
+              TabOrder = 0
+            end
+          end
+          object BtnCadastro: TRoundRect
+            Align = Center
+            Fill.Color = claCornflowerblue
+            Size.Width = 320.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            OnClick = BtnCadastroClick
+            object LblCadastre: TLabel
+              Align = Center
+              StyledSettings = [Family, Style, FontColor]
+              Size.Width = 189.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 22.000000000000000000
+              TextSettings.HorzAlign = Center
+              Text = 'Cadastre-se'
+              TabOrder = 0
+            end
+          end
+        end
+      end
+    end
+    object TabItemCadastro: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItemCadastro'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object LayoutBackCadastro: TLayout
+        Align = Client
+        Size.Width = 320.000000000000000000
+        Size.Height = 480.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object LayoutCabecalhoCadastro: TLayout
+          Align = Top
+          Size.Width = 320.000000000000000000
+          Size.Height = 185.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object LblCadastrar: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Size.Width = 320.000000000000000000
+            Size.Height = 41.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 26.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Cadastre-se'
+            TabOrder = 0
+          end
+          object ImgCadastro: TImage
+            MultiResBitmap = <
+              item
+              end>
+            Align = Center
+            Size.Width = 204.000000000000000000
+            Size.Height = 122.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object LayoutCorpoCadastro: TLayout
+          Align = Top
+          Position.Y = 185.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 160.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object LblEmailCadastro: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Size.Width = 320.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Email'
+            TabOrder = 0
+          end
+          object EditEmailCadastro: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 1
+            Position.Y = 33.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object LblSenhaCadastro: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.Y = 55.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Senha'
+            TabOrder = 2
+          end
+          object EditSenhaCadastro: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 3
+            Position.Y = 81.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object LayoutRodapeCadastro: TLayout
+          Align = Bottom
+          Position.Y = 344.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 136.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object BtnCadastrar: TRoundRect
+            Align = Top
+            Fill.Color = claCornflowerblue
+            Size.Width = 320.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            OnClick = BtnCadastrarClick
+            object LblBtnCadastrar: TLabel
+              Align = Center
+              StyledSettings = [Family, Style, FontColor]
+              Size.Width = 180.000000000000000000
+              Size.Height = 29.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 22.000000000000000000
+              TextSettings.HorzAlign = Center
+              Text = 'Cadastrar'
+              TabOrder = 0
+            end
+          end
+          object BtnLimparTextoCadastro: TRoundRect
+            Align = Center
+            Fill.Color = claCornflowerblue
+            Size.Width = 320.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            object LblBtnLimparTextoCadastro: TLabel
+              Align = Center
+              StyledSettings = [Family, Style, FontColor]
+              Size.Width = 181.000000000000000000
+              Size.Height = 33.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 22.000000000000000000
+              TextSettings.HorzAlign = Center
+              Text = 'Limpar Texto'
+              TabOrder = 0
+            end
+          end
+        end
+      end
+    end
+    object TabItemVeiculo: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Cadastro de Veiculo'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object LayoutFundoVeiculo: TLayout
+        Align = Client
+        Size.Width = 320.000000000000000000
+        Size.Height = 480.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object LayoutCabecalho: TLayout
+          Align = Top
+          Size.Width = 320.000000000000000000
+          Size.Height = 57.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object lblCadastroVeiculo: TLabel
+            Align = Client
+            StyledSettings = [Family, Style, FontColor]
+            Size.Width = 320.000000000000000000
+            Size.Height = 57.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 26.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Cadastro de Ve'#237'culo'
+            TabOrder = 0
+          end
+        end
+        object LayoutCampos: TLayout
+          Align = Top
+          Position.Y = 57.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 304.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object EditPlacaVeiculo: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 0
+            Position.Y = 25.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object LabelPlaca: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Size.Width = 320.000000000000000000
+            Size.Height = 25.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Placa'
+            TabOrder = 1
+          end
+          object LabelDescricao: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.Y = 47.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Descricao'
+            TabOrder = 2
+          end
+          object EditDescricaoVeiculo: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 3
+            Position.Y = 73.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object LabelTamTanque: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.Y = 95.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 34.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Tamanho Tanque'
+            TabOrder = 4
+          end
+          object EditTamanhoTanque: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 5
+            Position.Y = 129.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object LabelMediaG: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.Y = 151.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Media Gasolina'
+            TabOrder = 6
+          end
+          object EditMediaGasolina: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 7
+            Position.Y = 177.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object LabelMediaEtanol: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.Y = 199.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Media Etanol'
+            TabOrder = 8
+          end
+          object EditMediaEtanol: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 9
+            Position.Y = 225.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object LabelMediaDiesel: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.Y = 247.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Media Diesel'
+            TabOrder = 10
+          end
+          object EditMediaDiesel: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 11
+            Position.Y = 273.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object LayoutRodape: TLayout
+          Align = Bottom
+          Position.Y = 360.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 120.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object BtnCadastrarVeiculo: TRoundRect
+            Align = Top
+            Fill.Color = claCornflowerblue
+            Size.Width = 320.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            OnClick = BtnCadastrarVeiculoClick
+            object LabelCadVeiculo: TLabel
+              Align = Center
+              StyledSettings = [Family, Style, FontColor]
+              Size.Width = 133.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.HorzAlign = Center
+              Text = 'Cadastrar'
+              TabOrder = 0
+            end
+          end
+          object BtnClearVeiculo: TRoundRect
+            Align = Center
+            Fill.Color = claCornflowerblue
+            Size.Width = 320.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            OnClick = BtnClearVeiculoClick
+            object LabelClearVeiculo: TLabel
+              Align = Center
+              StyledSettings = [Family, Style, FontColor]
+              Size.Width = 205.000000000000000000
+              Size.Height = 34.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.HorzAlign = Center
+              Text = 'Limpar Texto'
+              TabOrder = 3
+            end
+          end
+          object BtnEditarVeiculo: TRoundRect
+            Align = Bottom
+            Fill.Color = claCornflowerblue
+            Position.Y = 88.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            object LabelEditarVeiculo: TLabel
+              Align = Center
+              StyledSettings = [Family, Style, FontColor]
+              Size.Width = 156.000000000000000000
+              Size.Height = 34.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.HorzAlign = Center
+              Text = 'Editar Veiculo'
+              TabOrder = 3
+            end
+          end
+        end
+      end
+    end
+    object TabItemViagem: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Cadastro de Viagem'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object LayoutFundo: TLayout
+        Align = Client
+        Size.Width = 320.000000000000000000
+        Size.Height = 480.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object LayoutCabecalhoViagem: TLayout
+          Align = Top
+          Size.Width = 320.000000000000000000
+          Size.Height = 57.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object LabelCadastroViagem: TLabel
+            Align = Center
+            StyledSettings = [Family, Style, FontColor]
+            Size.Width = 240.000000000000000000
+            Size.Height = 43.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Cadastro de Viagem'
+            TabOrder = 0
+          end
+        end
+        object LayoutCorpoViagem: TLayout
+          Align = Top
+          Position.Y = 57.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 304.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object LabelVeiculoViagem: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Size.Width = 320.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Veiculo'
+            TabOrder = 0
+          end
+          object LabelOrigemViagem: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.Y = 55.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Origem'
+            TabOrder = 1
+          end
+          object EditOrigemViagem: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 2
+            Position.Y = 81.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object LabelDestinoViagem: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.Y = 103.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Destino'
+            TabOrder = 3
+          end
+          object EditDestinoViagem: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 4
+            Position.Y = 129.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object LabelValorGasolina: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.Y = 153.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Valor Gasolina'
+            TabOrder = 5
+          end
+          object EditValorGasolina: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 6
+            Position.Y = 177.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object LabelValorEtanol: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.Y = 199.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Valor Etanol'
+            TabOrder = 7
+          end
+          object EditValorEtanol: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 8
+            Position.Y = 225.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object LabelValorDiesel: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.Y = 247.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 34.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            Text = 'Valor Diesel'
+            TabOrder = 9
+          end
+          object EditValorDiesel: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Bottom
+            TabOrder = 10
+            Position.Y = 282.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object ComboBoxVeiculoViagem: TComboBox
+            Align = Top
+            Position.Y = 33.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 11
+          end
+        end
+        object LayoutRodapeViagem: TLayout
+          Align = Top
+          Position.Y = 361.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 120.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object BtnCalcularViagem: TRoundRect
+            Align = Top
+            Fill.Color = claCornflowerblue
+            Size.Width = 320.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            OnClick = BtnCalcularViagemClick
+            object LabelCalcularViagem: TLabel
+              Align = Center
+              StyledSettings = [Family, Style, FontColor]
+              Size.Width = 170.000000000000000000
+              Size.Height = 37.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.HorzAlign = Center
+              Text = 'Calcular'
+              TabOrder = 0
+            end
+          end
+          object BtnClearViagem: TRoundRect
+            Align = Bottom
+            Fill.Color = claCornflowerblue
+            Position.Y = 86.000000000000000000
+            Size.Width = 320.000000000000000000
+            Size.Height = 34.000000000000000000
+            Size.PlatformDefault = False
+            OnClick = BtnClearViagemClick
+            object LabelClearViagem: TLabel
+              Align = Center
+              StyledSettings = [Family, Style, FontColor]
+              Size.Width = 173.000000000000000000
+              Size.Height = 41.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.HorzAlign = Center
+              Text = 'Limpar Texto'
+              TabOrder = 0
+            end
+          end
+          object BtnCadastrarViagem: TRoundRect
+            Align = Center
+            Fill.Color = claCornflowerblue
+            Size.Width = 320.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            OnClick = BtnCadastrarViagemClick
+            object LabelCadastrarViagem: TLabel
+              Align = Center
+              StyledSettings = [Family, Style, FontColor]
+              Size.Width = 159.000000000000000000
+              Size.Height = 28.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.HorzAlign = Center
+              Text = 'Cadastrar Viagem'
+              TabOrder = 0
+            end
+          end
+        end
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 280
+    Top = 8
+    object TabCadastro: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItemCadastro
+    end
+    object TabLogin: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItemLogin
+    end
+    object TabCadVeiculo: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItemVeiculo
+    end
+    object TabCadViagem: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItemViagem
+    end
+  end
+end
